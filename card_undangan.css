@@ -1,0 +1,513 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8dc; /* cream transparan */
+  color: #8b4513;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Foto header dilayar utama */
+#header img {
+  max-width: 100%;
+  height: auto;
+  animation: fadeInDown 1.5s ease;
+  opacity: 5;
+}
+
+/* Animasi dasar */
+.aos-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Styling pasangan */
+/* Aturan khusus untuk section sang mempelai */
+#tentang-pasangan {
+  min-height: 100vh;           /* penuh layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* isi rata tengah vertikal */
+  align-items: center;
+  padding-top: 60px;           /* jarak dari atas */
+  padding-bottom: 40px;        /* jarak dari bawah */
+}
+
+
+.img-profil {
+  width: 200px;
+  height: auto;
+  object-fit: cover;    /* foto pas di dalam oval */
+  border-radius: 50%;   /* bentuk oval/bulat */
+  border: none;         /* hilangkan garis putih */
+  box-shadow: none;     /* hilangkan bayangan */
+  animation: zoomIn 1.5s ease forwards; /* animasi zoom */
+  position: relative;
+  top: -30;
+}
+
+.tittle-section {
+  position: relative;
+  top: -40px;
+  display: inline-block;
+  font-size: 1.8em;
+  color: #8b4513;
+  margin-bottom: 0;
+  vertical-align: middle;
+  animation: fadeInDown 1.5s ease forwards;
+}
+
+.foto4 {
+  display: block;
+  margin-left: auto;
+  margin-right:auto
+}
+ /*semua h2 */
+h2 {
+  font-size: 1.4em;
+  color: #8b4513;
+  margin-top: 10px;
+  animation: flipLeft 1.5s ease forwards;
+}
+
+p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  animation: fadeInDown 1.5s ease forwards;
+}
+
+/* === Audio Button === */
+#btn-audio {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+#btn-audio button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn-audio img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+#btn-audio img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* SECTION  info acara*/
+.info-acara {
+  background: #fff8dc;
+  padding: 60px 20px;
+  animation: transform 1s ease;
+}
+
+/* BOX UTAMA */
+.acara-box {
+  background: #fff8dc;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* JUDUL */
+.acara-box h2 {
+  margin-bottom: 10px;
+  color: #b38b59;
+}
+
+/* GRID INFO */
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* COUNTDOWN BULAT */
+.countdown-circle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.countdown-circle div {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #b38b59;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.countdown-circle span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* TOMBOL LOKASI */
+.btn-lokasi {
+  margin-top: 10px;
+  background: #b38b59;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-lokasi:hover {
+  background: #9c7448;
+}
+
+/* GALERY */
+.galeri h2 {
+  margin-bottom: 20px;
+  color: #b38b59;
+}
+
+/* GRID */
+.galeri-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: auto;
+  width: 100%;
+}
+
+/* FOTO */
+.galeri-container img {
+  width: 100%;
+  height: auto;              /* biar tinggi menyesuaikan */
+  object-fit: contain;       /* tampilkan foto utuh */
+  object-position: center;   /* posisikan di tengah */
+  border-radius: 12px;
+  transition: 0.4s;
+  cursor: pointer;
+  background-color: #000;    /* opsional: ruang kosong jadi hitam */
+}
+
+/* HOVER EFFECT */
+.galeri-container img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* Modal background */
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;          /* pastikan di atas semua elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Gambar besar */
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 80%;
+  border: 4px solid #fff;
+  border-radius: 12px;
+  animation: fadeIn 0.5s;
+  z-index: 10000;         /* biar gambar tidak menutupi tombol */
+}
+
+/* Tombol close */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;         /* lebih tinggi dari modal & gambar */
+  pointer-events: auto;   /* pastikan bisa diklik */
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* SECTION */
+.rsvp {
+  background: #fff8dc;
+  padding: 60px 20px;
+}
+
+/* CONTAINER BOX */
+.rsvp-container {
+  background: #fff8dc;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+#formRSVP input,
+#formRSVP select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #fff8dc;
+  font-size: 14px;
+}
+
+/* BUTTON */
+#formRSVP button {
+  width: 100%;
+  padding: 12px;
+  background: #b38b59;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#formRSVP button:hover {
+  background: #9c7448;
+}
+
+
+/* ucapan dan doa */
+.ucapan {
+  background: #fff8dc;
+  padding: 60px 20px;
+}
+
+/* CONTAINER */
+.ucapan-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* FORM BOX */
+.form-ucapan {
+  background: #fff8dc;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  animation: fadeUp 1s ease;
+}
+
+/* INPUT */
+.form-ucapan input,
+.form-ucapan textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #fff8dc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* FOCUS EFFECT */
+.form-ucapan input:focus,
+.form-ucapan textarea:focus {
+  border-color: #b38b59;
+  box-shadow: 0 0 5px rgba(179,139,89,0.4);
+}
+
+/* TEXTAREA */
+.form-ucapan textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* BUTTON */
+.form-ucapan button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #b38b59, #9c7448);
+  color: #fff8dc;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* HOVER BUTTON */
+.form-ucapan button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* LIST UCAPAN */
+.list-ucapan {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 50px;
+}
+
+
+/* penutup */
+.item-ucapan {
+  background: #fff8dc;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: muncul 0.5s forwards;
+}
+
+/* NAMA */
+.item-ucapan h4 {
+  margin: 0;
+  color: #8b4513;
+  font-size: 15px;
+}
+
+/* ISI UCAPAN */
+.item-ucapan p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #8b4513;
+}
+
+/* Penutup Undangan */
+.penutup {
+  background: #fff8dc; /* cream */
+  padding: 60px 20px;
+}
+
+.penutup-box {
+  background: #fff8dc;
+  max-width: 500px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: zoomInOut 1.5s ease forwards; /* animasi */
+}
+
+.penutup-box h2 {
+  color: #8b4513;
+  margin-bottom: 15px;
+}
+
+.penutup-box h3 {
+  color: #8b4513;
+  margin-top: 20px;
+}
+
+.penutup-box p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #8b4513;
+}
+
+
+/* Footer Undangan */
+.footer {
+  background: #ad8d76;       /* warna coklat elegan */
+  color: #fff8dc;            /* teks cream */
+  text-align: center;        /* teks di tengah */
+  padding: 5px 5px;        /* ruang atas bawah */
+  font-size: 0.9em;
+  position: relative;        /* tetap di bawah konten */
+}
+
+.footer p {
+  margin: 0;                 /* hilangkan margin default */
+}
+
+/* ...CSS lain... */
+
+/* Animasi Scroll Global */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-anim.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Aturan untuk laptop/desktop */
+/* Default (HP) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+/* Laptop/Desktop */
+@media (min-width: 1024px) {
+  .close {
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+  }
+}
