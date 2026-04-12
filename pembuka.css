@@ -1,0 +1,107 @@
+/* === Popup Cover === */
+#modal {
+  display: none;        /* default sembunyikan */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background: #fff8dc;
+  z-index: 9999;
+  overflow: auto;
+}
+
+#modal .img {
+  max-width: 95% !important;
+  max-height: 95vh !important;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+#modal.show {
+  display: flex;        /* tampilkan popup */
+  opacity: 1;
+}
+
+body.modal-open {
+  overflow: hidden;     /* kunci scroll saat popup aktif */
+}
+
+
+.popup {
+  background: none;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  padding: 30px;
+  text-align: center;
+}
+
+
+/* konten popup */
+.popup-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  width: 500%;
+}
+
+
+.popup-content h2 {
+  font-size: 2.5em;
+  color: #321906;
+  margin: 10px 0;
+}
+
+.popup-content h1 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #8b4513;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-content button:hover {
+  background: #5a2e0f;
+}
+
+#btn-audio {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+#btn-audio button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn-audio img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+#btn-audio img:hover {
+  transform: scale(1.1);
+}
+#playPausebtn {
+  display: inline-block;
+  opacity: 1;
+}
