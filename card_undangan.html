@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <link rel="stylesheet" href="pembuka.css">
+  <link rel="stylesheet" href="card_undangan.css">
+</head>
+<body>
+     <!-- Popup -->
+  <div id="modal" class="popup">
+    <div class="popup-content">
+      <img class="img" src="asset/image/foto1.png">
+      <h2>Pawiwahan</h2>
+      <h1>
+        Warnata<br>
+        <span class="h3">&</span><br>
+         Eka
+        </h1>
+      <p>Kepada Yth Sdr/Ibu/Bpk: <span class="nama-tamu"><br>
+        Pasgabat</span></p>
+      <button id="btn-open">Buka Undangan</button>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio id="myAudio" loop autoplay muted>
+    <source src="asset/music/music.mp3" type="audio/mpeg">
+  </audio>
+ 
+
+  <!-- Intro -->
+  <section id="intro"></section>
+
+  <!-- Header -->
+  <section id="header">
+    <img src="asset/image/foto2.png" width="500" height="auto">
+  </section>
+
+  <!-- Pengantar -->
+  <section id="pengantar" class="container text-center" class="fade-in">
+    <div>
+      <img src="asset/image/foto3.png" width="140">
+    </div>
+    <br>
+    <div>
+      Atas Asung Kerta Wara Nughrah Ida Sang Hyang Widhi Wasa/Tuhan Yang Maha Esa, kami bermaksud mengundang<br>
+      Bapak/Ibu/Saudara/i pada Resepsi Upacara Manusa Yadnya (Pawiwahan/Pernihakan) Putra dan Putri kami
+    </div>
+  </section>
+  
+
+  <!-- Sang Mempelai -->
+  <section id="tentang-pasangan">
+    <div class="container text-center">
+      <div class="text-center">
+        <img class="foto4" src="asset/image/foto4.png" width="140">
+      </div>
+      <div class="tittle-section">
+        Sang Mempelai
+      </div>
+
+      <div class="row">
+        <!-- Mempelai pria -->
+        <div class="col-lg-6">
+          <img class="img-profil" src="asset/mempelai/fotolk.png">
+          <h2>I Made Warnata</h2>
+          <div>
+            <p>
+              Putra Kedua dari pasangan<br>
+              Bapak I Nengah Togog (alm) dan Ibu Ni Made Wardani<br><br>
+              <i class="fa-map-marker-alt" aria-hidden="true"></i>
+             📍 Dusun Penarukan, Desa Bumbungan, Kec. Banjarangkan, Kab. Klungkung
+            </p>
+            <a href="https://www.instagram.com/evayanti038/">
+              <i class="fab fa-2x fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mempelai wanita -->
+        <div class="col-lg-6">
+          <img class="img-profil" src="asset/mempelai/fotopr.png">
+          <h2>Ni Putu Eka Pariani</h2>
+          <div>
+            <p>
+              Putri Pertama dari pasangan<br>
+              Bapak I Wayan Galung dan Ibu Ni Kade Wati<br><br>
+              <i class="fa-map-marker-alt" aria-hidden="true"></i>
+              📍 Dusun Rame, Desa Kusamba, Kec. Dawan, Kab. Klungkung
+            </p>
+            <a href="https://www.instagram.com/evayanti038/">
+              <i class="fab fa-2x fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div> <!-- tutup row -->
+    </div> <!-- tutup container -->
+  </section>
+
+  <!-- info acara -->
+  <section class="section info-acara fade">
+    <div class="acara-box">
+      <h2>Info Acara</h2>
+      <div class="info-grid">
+        <div>⏰ 12.00 WITA - Selesai</div>
+        <div>📅 Rabu, 22 April 2026</div>
+      </div>
+      <!-- COUNTDOWN BULAT -->
+      <div class="countdown-circle">
+        <div><span id="hari">0</span><small>Hari</small></div>
+        <div><span id="jam">0</span><small>Jam</small></div>
+        <div><span id="menit">0</span><small>Menit</small></div>
+        <div><span id="detik">0</span><small>Detik</small></div>
+      </div>
+      <p>📍 Dusun Penarukan, Desa Bumbungan, Kec, Banjarangkan, Kab, Klungkung</p>
+      <a href="https://maps.app.goo.gl/vokgXgs3GYeRbGoXA?g_st=aw" target="_blank">
+        <button class="btn-lokasi">Lihat Lokasi</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- galeri foto -->
+  <section class="section galeri fade">
+    <h2>Photo Gallery</h2>
+    <div class="galeri-container">
+      <img src="asset/galerifoto/SBP_2259.JPG">
+      <img src="asset/galerifoto/SBP_2254.JPG">
+      <img src="asset/galerifoto/SBP_2269.JPG">
+      <img src="asset/galerifoto/SBP_2287(1).JPG">
+      <img src="asset/galerifoto/SBP_2291.JPG">
+      <img src="asset/galerifoto/SBP_2308.JPG">
+      <img src="asset/galerifoto/SBP_2314.JPG">
+      <img src="asset/galerifoto/SBP_2287(1).JPG">
+    </div>
+  </section>
+
+<!-- Modal untuk gambar -->
+<div id="myModal" class="modal">
+  <div class="modal-content-wrapper">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="imgModal">
+  </div>
+</div>
+
+
+  <!-- konfirmasi tamu -->
+  <section class="section rsvp fade">
+    <h2>Konfirmasi Kehadiran</h2>
+    <div class="rsvp-container">
+      <form id="formRSVP">
+        <input type="text" id="nama" placeholder="Nama Anda" required>
+        <select id="kehadiran" required>
+          <option value="">Pilih Kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+        <button type="submit">Kirim</button>
+      </form>
+      <p id="status"></p>
+    </div>
+  </section>
+
+  <!-- ucapan -->
+  <section class="section ucapan fade">
+    <h2>Ucapan & Doa</h2>
+    <div class="ucapan-container">
+      <div class="form-ucapan">
+        <input type="text" id="namaUcapan" placeholder="Nama Anda">
+        <textarea id="isiUcapan" placeholder="Tulis ucapan..."></textarea>
+        <button onclick="kirimUcapan()">Kirim</button>
+      </div>
+      <div id="listUcapan" class="list-ucapan"></div>
+    </div>
+  </section>
+
+  <!-- Penutup Undangan -->
+<section class="section penutup">
+  <div class="penutup-box">
+    <h2>Terima Kasih</h2>
+    <p>
+      Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+      berkenan hadir untuk memberikan doa restu pada acara kami.
+    </p>
+    <p>
+      Atas kehadiran dan doa restu, kami ucapkan terima kasih.
+    </p>
+    <h3>Hormat Kami,</h3>
+    <h2>Warnata & Eka</h2>
+  </div>
+</section>
+
+<!-- Footer Undangan -->
+<footer class="footer">
+  <p>© 2026 evayanti</p>
+</footer>
+
+  <script src="pembuka.js"></script>
+  <script src="card_undangan.js"></script>
+</body>
+</html>
