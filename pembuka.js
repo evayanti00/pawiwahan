@@ -2,6 +2,14 @@ window.addEventListener("load", () => {
   document.body.classList.add("modal-open");
   const modal = document.getElementById("modal");
   modal.classList.add("show"); // tampilkan popup
+
+  // --- Tambahan: ambil nama dari URL ---
+  const params = new URLSearchParams(window.location.search);
+  const nama = params.get("nama") || "Tamu"; // default kalau kosong
+  const target = document.querySelector(".nama-tamu");
+  if (target) {
+    target.textContent = nama;
+  }
 });
 
 function hideplay() {
